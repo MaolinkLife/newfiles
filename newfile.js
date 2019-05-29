@@ -1,4 +1,4 @@
 var x = 0;
 var y = 1;
 
-alert("hello world");
+console.log("hello world");
