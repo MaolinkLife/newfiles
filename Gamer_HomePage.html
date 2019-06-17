@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@font-face {
+			font-family: HelveticaNeueCyr, Bebas Neue;
+			}
+
+
+		*,*::after, *::before {
+			font-family: HelveticaNeueCyr, Bebas Neue;
+			box-sizing: inherit;
+			}
+
+
+		::-webkit-scrollbar { width: 0; }
+	
+		body {
+			background: #1B1B25; 
+			margin: 0;
+			}
+
+		div.main-container {
+			display: flex; 
+			margin: 0px 373px; 
+			max-width: 1280px; 
+			min-height: 180px; 
+			flex-direction: column; 
+			box-sizing: border-box;
+			color: #D1D2D6; 
+			}
+		
+		div.main-container>div:not(:first-child) {
+			margin-top: 20px;
+			}
+
+		div.row-panel {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			}
+		
+		div.image {
+			display: flex;
+			width: 100%;
+			box-sizing: border-box;
+			background-image: url('png/logo.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+
+		div.image-64 {
+			max-width: 96px;
+			height: 96px;
+			}
+
+		div.horizontal-panel {
+			display: flex;
+			flex-direction: row;
+			}
+
+		.tile {
+			justify-content: space-between !important;
+			}
+
+		div.icon-small {
+			width: 24px; 
+			height: 24px; 
+			}
+
+		div.icon-small:not(:last-child) {
+			margin-right: 20px;
+			}
+
+
+		div.icon-panel, div.item-panel {
+			display: flex; 
+			align-items: center; 
+			justify-content: space-between;
+			}
+
+		div.element-panel {
+			display: flex; 
+			color: #D1D2D6; 
+			align-items: center; 
+			justify-content: space-around; 
+			width: 100%; 
+			font-family: HelveticaNeueCyr; 
+			font-style: normal; 
+			font-weight: normal;
+			font-size: 19px;
+			line-height: 28px;
+			}
+
+		div.element-panel div.element {
+			display: flex; 
+			flex-direction: column;
+			color: #D1D2D6;
+			cursor: pointer;
+			}			
+
+		.element-red:hover {
+			font-family: HelveticaNeueCyr; 
+			color: #AE143E !important;
+			}		
+
+		div.button-border-box {
+			margin-left: 20px;
+			display: flex; 
+			align-items: center; 
+			justify-content: flex-end; 
+			font-family: HelveticaNeueCyr; 
+			font-style: normal; 
+			font-weight: normal;
+			}	
+
+		button {
+			width: 135px; 
+			height: 54px; 
+			background: #272938; 
+			border: none; 
+			outline: none; 
+			display: flex; 
+			justify-content: space-around; 
+			padding: 13px; 
+			color: #D1D2D6; 
+			font-family: HelveticaNeueCyr; 
+			font-style: normal; 
+			font-weight: normal; 
+			border-radius: 4px; 
+			font-size: 15px; 
+			line-height: 24px; 
+			box-sizing: border-box;
+			align-items: center;
+			cursor: pointer;
+			}
+
+
+		div.line {
+			height: 8px; 
+			width: 100%; 
+			margin: 0 auto; 
+			box-sizing: border-box; 
+			background: #1B1B25; 
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75); 
+			border-radius: 4px; 
+			margin-bottom: 20px;
+			}
+
+		small {
+			font-family: HelveticaNeueCyr medium !important;
+			font-size: 16px; 
+			line-height: 24px;
+			}
+
+		small.darken {
+			color: #3F3F5B;
+			}
+
+		.item-right {
+			display: flex; 
+			align-items: center; 
+			text-align: right;  
+			justify-content: flex-end;
+			}
+
+		.item-left {
+			display: flex; 
+			align-items: baseline;
+			text-align: left;  
+			justify-content: flex-start;
+			}
+
+		div.main-container:not(:last-child) {
+			margin-bottom: 40px;
+			}
+
+		div.slider-box {
+			height: 578px;
+			cursor: pointer;
+			}
+
+		div.slider-box.red {
+			background: linear-gradient(0deg, #780A23, #780A23), url(images/pagan.jpg); 
+			background-repeat: no-repeat; background-size: cover; 
+			background-blend-mode: hard-light, normal;
+			}
+
+		div.slider-box>div.large-content {
+			padding-top: 115px;
+			padding-left: 40px;
+			padding-bottom: 115px; 
+			height: 100%; 
+			width: 100%; 
+			display: flex; 
+			flex-direction: column; 
+			box-sizing: border-box;
+			justify-content: space-between;
+			color: #fff;
+			word-wrap: break-word;
+			}
+
+		.large-content>.title {
+			font-family: Bebas Neue; 
+			font-style: normal; 
+			font-weight: bold;
+			}
+
+		.text-medium {
+			font-size: 24px;
+			line-height: 28px;
+			font-family: HelveticaNeueCyr medium;
+			font-style: normal;
+			font-weight: normal;
+			}	
+
+
+		.text-small {
+			font-size: 16px;
+			line-height: 24px;
+			font-family: HelveticaNeueCyr medium;
+			font-style: normal;
+			font-weight: normal;
+			}
+
+		.text-extra-small {
+			font-size: 14px; 
+			font-family: HelveticaNeueCyr medium;
+			line-height: 21px;
+			}	
+
+		.large-content>.title.large {
+			font-size: 48px; 
+			line-height: 64px;
+			}
+
+		.col-50 {
+			max-width: 50%;
+			}
+	
+		.rounded {
+			border-radius: 50%;
+			}
+
+		.icon-large {
+			width: 64px; 
+			height: 64px; 
+			}
+
+		.icon-large:not(:last-child) {
+			margin-right: 20px;
+			}
+
+		.pressed-element {
+			border: 1px solid #fff;  
+			background: #fff;
+			}
+	
+		.box {
+			display: flex;
+			}
+
+		.center {
+			justify-content: center !important;
+			}
+	
+		.around {
+			justify-content: space-around !important;
+			}
+	
+		.small-element {
+			width: 10px; 
+			height: 10px;
+			border: 1px solid #fff; 
+			background: #fff; 
+			opacity: 0.56;
+			}
+
+		.small-element:not(:last-child) {
+			margin-right: 20px;
+			}
+
+		.small-element.active {
+			opacity: 1.0;
+			}
+
+		.serving-element {
+			position: absolute; 
+			margin: 247px 0px 0px 924px !important;
+			}
+
+		a {
+			cursor: pointer;
+			}
+
+		a.green {
+			color: #6BB755 !important;
+			}
+
+		a.blue {
+			color: #43B4DE !important;
+			}
+
+
+		a.green:hover {
+			color: #437b33 !important;
+			}
+
+		a.blue:hover {
+			color: #2F99CA !important;
+			}	
+
+
+		.indents>*:not(:last-child) {
+			margin-right: 20px;
+			}
+
+
+		a:-webkit-any-link { 
+			text-decoration: none; 
+			}
+
+		.card {
+			border-radius: 4px;
+			cursor: pointer;
+			display: flex;
+			background: #2B2E3D; 
+			box-shadow: -4px 4px 16px rgba(0, 0, 0, 1.0);
+			}
+		
+		
+		.card.large {
+			display: flex;
+			width: 576px;
+			height: 368px;
+			}		
+
+		.card.medium {
+			display: flex;
+			width: 221px;
+			height: 313px;
+			}
+
+		img {
+			border: none;
+			}
+
+		hr {
+			width: 100%;
+			}
+
+
+		.icon-fl {
+			filter: invert(1);
+			}
+
+		.card-background {
+			width: 100%; 
+			filter: blur(3px) brightness(50%);
+			}
+
+
+		.card.large>.card-content {
+			position: absolute;
+			display: flex; 
+			justify-content: space-between; 
+			box-sizing: border-box;
+			padding: 20px;
+			}
+		
+		.card.medium>.card-content {
+			display: flex; 
+			flex-direction: column; 
+			width: 100%; 
+			justify-content: space-between;
+			padding: 0 0 10px 0;	
+			}
+		
+		.card.medium>.card-content>div {
+			padding: 9px;
+			}
+
+		.card.medium>.card-content>div>.mark {		
+			display: flex; 
+			min-width: 32px; 
+			height: 24px; 
+			background: #fff; 
+			border-radius: 40px; 
+			font-size: 14px; 
+			line-height: 24px; 
+			align-items: center; 
+			justify-content: center; 
+			padding: 0 2px; 
+			font-style: normal; 
+			font-weight: 550;
+			}
+		
+		.card.medium>.card-content>div>.mark>div {
+			color: #AE143E !important;
+			}
+
+
+		.card.medium>.card-content>.text-description {
+		    background: linear-gradient(to right, rgba(43, 46, 61, 0.56) 0%, rgba(43, 46, 61, 0) 100%);
+			padding: 9px; 
+			font-size: 18px; 
+			color: #fff; 
+			font-style: normal; 
+			font-family: HelveticaNeueCyr medium;
+			}
+
+		.card.large>.card-content>.text-description {
+			display: flex; 
+			flex-direction: column; 
+			width: 290px; 
+			margin-left: 20px;
+			}
+
+		.text-description>.title {
+			font-weight: 550; 
+			font-size: 18px;
+			line-height: 24px;
+			color: #fff;
+			font-family: HelveticaNeueCyr;
+			font-style: normal;
+			font-weight: bold;
+			}	
+
+		.text-description>.description, .subtitle {
+			font-family: HelveticaNeueCyr;
+			font-style: normal;
+			font-weight: 550;
+			font-size: 15px;
+			line-height: 21px;
+			font-style: normal;
+			display: flex;
+			align-items: center;
+			}
+
+		.subtitle {
+			color: #fff; 
+			}	
+		
+		div.small-line {
+			margin: 20px 0px 10px 0px; 
+			background: rgba(196, 196, 196, 0.1); 
+			width: 100%; 
+			height: 3px;
+			}
+
+		
+		.text-description>div:not(:first-child)  {
+			margin-top: 15px;
+			}
+
+		.text-description>div>.avatar-image {
+			border-radius: 4px;
+			width: 48px;
+			height: 48px;
+			margin-right: 20px; 
+			border: 0.5px solid #36394E;
+			}
+
+		.items-center {
+			align-items: center !important;
+			}
+
+		.hov-blue:hover {
+			color: #43B4DE !important;
+			}
+
+		.hov-green:hover {
+			color: #6BB755 !important;
+			}	
+
+		.hov-blue, .hov-green {
+			cursor: pointer;
+			}
+
+
+
+		.card-box {
+			width: 280px; 
+			height: 280px;
+			box-shadow: -4px 4px 16px rgba(0, 0, 0, 1.0);
+			}
+
+		.card-box>.mark {
+			font-family: HelveticaNeueCyr;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 11px;
+			line-height: 15px; 
+			display: flex;
+			align-items: center; 
+			text-align: right; 
+			padding: 17px 21px;
+			}
+
+
+		.card-box>.mark>div {
+			min-width: 54px;
+			height: 31px;
+			background: #68b655;    
+			border-radius: 40px;
+			display: flex;
+			align-items: center;
+			box-sizing: content-box;
+			justify-content: center;
+			}
+
+		.card-box>.description {
+			display: flex; 
+			width: 100%; 
+			padding: 21px; 
+			box-sizing: border-box; 
+			background: linear-gradient(90deg, rgba(43, 46, 61, 0.56) 0%, rgba(43, 46, 61, 0) 100%);
+			}
+
+		.vertical-panel {
+			display: flex; 
+			flex-direction: column; 
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="main-container">
+	
+		<div class="row-panel">
+			<div class="image image-64"></div>
+					
+			<div class="element-panel">
+				<div class="hov-blue">Игры недели</div>
+				<div class="hov-green">Новинки игр</div>
+				<div class="hov-green">Обзоры редакции</div>
+				<div class="hov-green">Рейтинги</div>
+			</div>
+
+			<div class="icon-panel">
+				<div class="icon-small">
+					<img width="24" height="24" src="png/instagram.png">
+				</div>
+				<div class="icon-small">
+					<img width="24" height="24" src="png/youtube.png">
+				</div>				
+				<div class="icon-small">
+					<img width="24" height="24" src="png/vk.png">
+				</div>				
+				<div class="icon-small">
+					<img width="24" height="24" src="png/facebook.png">
+				</div>				
+				<div class="icon-small">
+					<img width="24" height="24" src="png/twitter.png">
+				</div>
+			</div>
+
+			<div class="button-border-box">
+				<div class="icon-small">
+					<img class="icon-fl" width="24" height="24" src="png/search.png">
+				</div>	
+				<button>
+					<div class="icon-small">
+						<img class="icon-fl" width="24" height="24" src="png/avatar.png">
+					</div>	
+					<span>
+						Войти
+					</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="line" style="/*background: linear-gradient(90deg, rgba(174, 20, 62, 0) 0%, #AE143E 18%, #6BB755 36%, #F6D265 54%, #43B4DE 72%, #6041BA 90%, rgba(96, 65, 186, 0) 100%);*/"></div>
+	
+		<div class="element-panel">
+			<div class="element">
+				<small class="darken item-right">1390</small>
+				<span class="item-right element-red">Шутеры</span>
+			</div>
+			<div class="element">
+				<small class="darken item-right">1287</small>
+				<span class="item-right element-red">Симуляторы</span>
+			</div>
+			<div class="element">
+				<small class="darken item-right">823</small>
+				<span class="item-right element-red">Спортивные</span>
+			</div>				
+			<div class="element">
+				<small class="darken item-right">716</small>
+				<span class="item-right element-red">Стратегии</span>
+			</div>				
+			<div class="element">
+				<small class="darken item-right">635</small>
+				<span class="item-right element-red">Файтинги</span>
+			</div>				
+			<div class="element">
+				<small class="darken item-right">684</small>
+				<span class="item-right element-red">Карточные</span>
+			</div>				
+			<div class="element">
+				<small class="darken item-right">480</small>
+				<span class="item-right element-red">MMO</span>
+			</div>				
+			<div class="element">
+				<small class="darken item-right">466</small>
+				<span class="item-right element-red">RPG</span>
+			</div>
+			<div class="element">
+				<small class="darken item-right">402</small>
+				<span class="item-right element-red">Инди</span>
+			</div>				
+			<div class="element">
+				<small class="darken item-right">1023</small>
+				<span class="item-right element-red">Другие</span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="main-container">
+		<div class="slider-box red">
+			
+			<div class="large-content">
+				<div class="title large col-50">
+					ОБЗОР PAGAN ONLINE: «КАК DIABLO, ТОЛЬКО ИНТЕРЕСНЕЕ»
+				</div>
+				<div  class="item-left">
+					<div class="icon-large rounded pressed-element"></div>
+
+					<div class="icon-large rounded pressed-element"></div>
+				</div>
+				<div class="box center">
+
+					<div class="icon-panel around">
+						<div class="small-element rounded"></div>
+						<div class="small-element rounded"></div>
+						<div class="small-element rounded"></div>
+						<div class="small-element rounded active"></div>
+					</div>
+				</div>	
+			
+			</div>
+
+		</div>
+		<div class="serving-element card medium" style="background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url(images/pagan-info.jpg);">
+		</div>
+	</div>
+
+	<div class="main-container">
+		<div class="item-left indents">
+			<span class="text-medium">Игры недели</span>
+			<a href="#" class="green text-small">Смотреть все</a>
+		</div>
+		<div class="item-panel">
+
+			<div class="card medium" style="background: url(images/PUBG.jpg) center / cover no-repeat;">
+				<div class="card-content">
+					<div class="item-right">
+						<div class="mark">
+							<div>8.2</div>
+						</div>	
+					</div>
+					<div class="text-description">
+						Playerunknown's battlegrounds
+					</div>
+				</div>
+			</div>
+
+			<div class="card medium" style="background: url(images/Counter-Strike-Global-Offensive.jpg) right / cover no-repeat;">
+				<div class="card-content">
+					<div class="item-right">
+						<div class="mark">
+							<div>9.7</div>
+						</div>	
+					</div>
+					<div class="text-description">
+						Counter-Strike: Global Offensive
+					</div>
+				</div>
+			</div>
+
+
+			<div class="card medium" style="background: url(images/rss.jpg) center / cover no-repeat;">
+				<div class="card-content">
+					<div class="item-right">
+						<div class="mark">
+							<div>9.6</div>
+						</div>	
+					</div>
+					<div class="text-description">
+						Tom Clancy's Rainbow Six Siege
+					</div>
+				</div>
+			</div>
+		
+			<div class="card medium" style="background: url(images/GTA5.jpg) center / cover no-repeat;">
+				<div class="card-content">
+					<div class="item-right">
+						<div class="mark">
+							<div>9.8</div>
+						</div>	
+					</div>
+					<div class="text-description">
+						Grand Theft Auto 5
+					</div>
+				</div>
+			</div>			
+
+			<div class="card medium" style="background: url(images/Warframe.jpg) right / cover no-repeat;">
+				<div class="card-content">
+					<div class="item-right">
+						<div class="mark">
+							<div>9.6</div>
+						</div>	
+					</div>
+					<div class="text-description">
+						Warframe
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="main-container">
+		<div class="item-left indents">
+			<span class="text-medium">Обзоры редакции</span>
+			<a href="#" class="green text-small">Смотреть все</a>
+		</div>
+		<div class="item-panel">
+			<div class="card large">
+				<div class="card-background" style="background: url(images/SpecOps_title.jpg) center / cover no-repeat;">
+				</div>
+
+				<div class="card-content">
+					<div class="card medium" style="background: url(images/SpecOps_title.jpg) center / cover no-repeat;">
+						<div class="card-content">
+							<div class="item-right">
+								<div class="mark">
+									<div>10</div>
+								</div>	
+							</div>
+							<div class="text-description">
+								Spec Ops: The line
+							</div>
+						</div>
+					</div>
+					<div class="text-description">
+						<div class="title">
+							Шедевр игропрома и однозначно лучшая игра года
+						</div>
+						<div class="description">
+							Никто не ожидал, что неизвестная до этого времени студия Yager Development даст жару самым популярных сериям игр. Перед нами открылся совершенно новый вид игрового исскуства, когда игрок вовлекался в игру настолько что...
+						</div>
+						<div class="small-line"></div>
+
+						<div class="item-left items-center">
+							<div class="avatar-image" style="background: url(images/avatar1.jpg) center / cover no-repeat;">
+							</div>
+							<div>
+								<div class="subtitle">Максим Григорьев</div>
+								<div class="text-extra-small">Разработчик</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card large">
+				<div class="card-background" style="background: url(images/theLustOfUs.jpg) center / cover no-repeat;">
+				</div>
+
+				<div class="card-content">
+					<div class="card medium" style="background: url(images/theLustOfUs.jpg) right / cover no-repeat;">
+						<div class="card-content">
+							<div class="item-right">
+								<div class="mark">
+									<div>10</div>
+								</div>	
+							</div>
+							<div  class="text-description">
+								The Last of Us 
+							</div>
+						</div>
+					</div>
+					<div class="text-description">
+						<div class="title">
+							Невероятный сюжет, прекрасная графика и...
+						</div>
+						<div class="description">
+							The Last of Us — это не просто игра про зомби-аппокалипсис, но еще и про человеческие взаимоотношения. Перед нами несколько главных героев, каждый из которых влияет на ход истории всей игры. Чтобы не говорили, но такие игры входят...
+						</div>
+						<div class="small-line"></div>
+						<div class="item-left items-center">
+							<div class="avatar-image" style="background: url(images/avatar1.jpg) center / cover no-repeat;"></div>
+							<div>
+								<div class="subtitle">Максим Григорьев</div>
+								<div class="text-extra-small">Разработчик</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-container">
+		<div class="item-left indents">
+			<span class="text-medium">Рейтинги</span>
+			<a href="#" class="green text-small">Смотреть все</a>
+		</div>
+		<div class="tile horizontal-panel">
+			<div class="card-box vertical-panel tile" style="background: url(images/game1.jpeg) center / cover no-repeat;">
+				<div class="mark">
+					<div>ТОП</div>
+				</div>
+
+				<div class="description">
+					<div>
+						<small>
+						Топ 20 самых переоценненных игр на ПК
+						</small>
+					</div>
+				</div>
+			</div>
+			<div class="card-box vertical-panel tile" style="background: url(images/game3.jpg) center / cover no-repeat;">
+				<div class="mark">
+					<div>ТОП</div>
+				</div>
+
+				<div class="description">
+					<div>
+						<small>
+						12 культовых игр, которые перевернули историю
+						</small>
+					</div>
+				</div>
+			</div>
+			<div class="card-box vertical-panel tile" style="background: url(images/game2.jpg) center / cover no-repeat;">
+				<div class="mark">
+					<div>ТОП</div>
+				</div>
+
+				<div class="description">
+					<div>
+						<small>
+							Десятка лучших игр про космос
+						</small>
+					</div>
+				</div>
+			</div>
+			<div class="card-box vertical-panel tile" style="background: url(images/game4.jpg) center / cover no-repeat;">
+				<div class="mark">
+					<div>ТОП</div>
+				</div>
+
+				<div class="description">
+					<div>
+						<small>
+							10 лучших гоночных игр 2010-2019 годов
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="main-container">
+		<div class="item-left indents">
+			<span class="text-medium">Новости</span>
+			<a href="#" class="blue text-small">Смотреть все</a>
+		</div>
+
+		<div class="horizontal-panel">
+			<div class="grid-column" style="display: flex; flex-direction: column; margin-right: 17px;">
+
+				<div style="width: 280px; height: 578px; background: #fff; margin-bottom: 17px;"></div>
+
+				<div style="width: 280px; height: 280px; background: #fff; margin-bottom: 17px;"></div>
+
+				<div style="width: 280px; height: 280px; background: #fff;"></div>
+
+			</div>
+
+			<div class="grid-column" style="display: flex; flex-direction: column; margin-right: 17px;">
+
+				<div class="grid-row" style="margin-bottom: 17px; display: flex;">
+					<div style="width: 280px; height: 280px; background: #fff; margin-right: 17px;">
+						
+					</div>
+					<div style="width: 280px; height: 280px; background: #fff;">
+						
+					</div>
+				</div>
+
+				<div style="width: 578px; height: 280px; background: #fff; margin-bottom: 17px;">
+					
+				</div>
+
+				<div class="grid-row" style="margin-bottom: 17px; display: flex;">
+
+					<div style="width: 280px; height: 578px; background: #fff; margin-right: 17px;">
+						
+					</div>
+
+					<div class="grid-column" style="display: flex; flex-direction: column;">
+						<div style="width: 280px; height: 280px; background: #fff; margin-bottom: 17px;"></div>
+						<div style="width: 280px; height: 280px; background: #fff; margin-bottom: 17px;"></div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="grid-column" style="display: flex; flex-direction: column;">
+
+				<div style="width: 280px; height: 280px; background: #fff; margin-bottom: 17px;"></div>
+
+				<div style="width: 280px; height: 578px; background: #fff; margin-bottom: 17px;"></div>
+	
+
+				<div style="width: 280px; height: 280px; background: #fff;"></div>
+			</div>
+		</div>
+
+
+		<div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+			<div>
+				<button style="display: flex; width: 190px; height: 47px; outline: none; border: 2px solid #fff; align-items: center; justify-content: center; padding: 0;">Смотреть еще</button>
+			</div>
+		</div>
+	</div>
+	
+
+	<div style="width: 100%; height: 5px; background: linear-gradient(90deg, #AE143E 0%, #6BB755 25%, #F6D265 50%, #43B4DE 75%, #6041BA 100%);"></div>
+
+	<div class="footer" style="display: flex; flex-direction: column; background: #0B0C11; height: 800px; width: 100%;">
+		
+		<div class="footer-logo" style=""></div>
+		<div class="icon-panel"></div>
+		<div class="main-container">
+			<div class="horizontal-panel tile">
+				<div class="vertical-panel">
+					<div class="list-title" style="">Игры</div>
+					<div class="vertical-panel">
+						<a class="darken">Шутеры</a>
+						<a class="darken">Симуляторы</a>
+						<a class="darken">Спортивные</a>
+						<a class="darken">Стратегии</a>
+						<a class="darken">Файтиги</a>
+						<a class="darken">Карточные</a>
+						<a class="darken">ММО</a>
+						<a class="darken">RPG</a>
+						<a class="darken">Инди</a>
+						<a class="darken">Другие</a>
+					</div>
+				</div>
+				<div class="vertical-panel">
+					<div class="list-title" style="">Редакции</div>
+					<div class="vertical-panel">
+						<a class="darken">Обзоры</a>
+						<a class="darken">Тренды месяца</a>
+						<a class="darken">Новости</a>
+						<a class="darken">Статьи</a>
+						<a class="darken">Топы</a>
+						<a class="darken">Интервью</a>
+						<a class="darken">Железо</a>
+						<a class="darken">Рейтинги</a>
+					</div>	
+				</div>
+				<div class="vertical-panel">
+					<div class="list-title" style="">Киберспорт</div>
+					<div class="vertical-panel">
+						<a class="darken">Новости</a>
+						<a class="darken">Соревнования</a>
+						<a class="darken">Обзоры</a>
+						<a class="darken">Наши трансляции</a>
+						<a class="darken">Интервью</a>
+						<a class="darken">Пользователи</a>
+
+					</div>	
+				</div>
+				<div class="vertical-panel">
+					<div class="list-title" style="">Игры недели</div>
+					<div class="vertical-panel">
+						<a class="darken">Самые популярные</a>
+						<a class="darken">Самые обсуждаемые</a>
+						<a class="darken">Самые новые</a>
+						<a class="darken">Подборки</a>
+					</div>	
+				</div>
+				<div class="vertical-panel">
+					<div class="list-title" style="">Новости редакции</div>
+					<div class="vertical-panel">
+						<a class="darken">Главные новости</a>
+						<a class="darken">Статьи</a>
+						<a class="darken">От пользователей</a>
+						<a class="darken">Рецензии</a>
+						<a class="darken">База игр</a>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
